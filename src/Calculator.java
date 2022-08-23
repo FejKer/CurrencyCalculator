@@ -1,10 +1,18 @@
+import org.xml.sax.SAXException;
+
 import javax.swing.*;
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.File;
+import java.io.IOException;
+import java.util.HashMap;
 
 public class Calculator extends JFrame {
     protected JFormattedTextField inputEUR;
     private JPanel mainPanel;
     private JFormattedTextField calculatedOutput;
     private JComboBox currencyList;
+    HashMap<String, Double> currencies = new HashMap<String, Double>();                 //hashmap przechowujacy symbol i kurs
+    DefaultComboBoxModel<String> model = new DefaultComboBoxModel<String>();
 
     Calculator() {
         this.setTitle("CurrencyCalculator");                            //nadanie tytułu aplikacji
@@ -16,9 +24,10 @@ public class Calculator extends JFrame {
         this.setVisible(true);
     }
 
-    public static void main(String[] args) {
-        FileHandler f = new FileHandler();                                            //wywołanie konstruktora klasy zajmującej się plikiem
-        Calculator c = new Calculator();                                             //wywołanie konstruktora klasy - wyświetlenie okna aplikacji i podanie nazwy okna
-        new InputListener(c);
+    public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
+        Calculator c = new Calculator();                                 //wywołanie konstruktora klasy - wyświetlenie okna aplikacji
+        FileHandler f = new FileHandler(c);                              //wywołanie konstruktora klasy zajmującej się plikiem
+        InputListener i = new InputListener(c);
+        c.currencyList.setModel(c.model);                                //aktualizacja danych
     }
 }
