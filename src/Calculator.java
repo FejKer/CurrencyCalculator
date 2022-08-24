@@ -31,8 +31,8 @@ public class Calculator extends JFrame {
 
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
         Calculator c = new Calculator();                                 //wywołanie konstruktora klasy - wyświetlenie okna aplikacji
-        FileHandler f = new FileHandler(c);                              //wywołanie konstruktora klasy zajmującej się plikiem
-        InputListener i = new InputListener(c);
+        new FileHandler(c);                                              //wywołanie konstruktora klasy zajmującej się plikiem
+        new InputListener(c);
         c.currencyList.setModel(c.model);                                //aktualizacja danych
     }
 
@@ -46,7 +46,7 @@ public class Calculator extends JFrame {
         try{
             d *= Double.parseDouble(inputEUR.getText());                        //zabezpieczenie na wypadek pustej wartości
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
         return d;
     }
