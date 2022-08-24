@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="29311396-a69b-4f16-adce-682cbfdeb9d7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Calculator.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculator.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +44,8 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RunManager">
@@ -86,13 +85,21 @@
       <option name="project" value="LOCAL" />
       <updated>1661295592932</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Visual changes, added few message dialog boxes">
+      <created>1661330161700</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1661330161700</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added three class files, made basic GUI and secured input" />
     <MESSAGE value="File parser reads data from local file, small gui changes, currencies are now listed to choose" />
-    <option name="LAST_COMMIT_MESSAGE" value="File parser reads data from local file, small gui changes, currencies are now listed to choose" />
+    <MESSAGE value="Visual changes, added few message dialog boxes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Visual changes, added few message dialog boxes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
