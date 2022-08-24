@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="29311396-a69b-4f16-adce-682cbfdeb9d7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InputListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InputListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,14 +94,22 @@
       <option name="project" value="LOCAL" />
       <updated>1661330161700</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added file download option">
+      <created>1661331057741</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1661331057741</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added three class files, made basic GUI and secured input" />
     <MESSAGE value="File parser reads data from local file, small gui changes, currencies are now listed to choose" />
     <MESSAGE value="Visual changes, added few message dialog boxes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Visual changes, added few message dialog boxes" />
+    <MESSAGE value="Added file download option" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added file download option" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

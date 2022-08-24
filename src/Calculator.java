@@ -3,17 +3,20 @@ import org.xml.sax.SAXException;
 import javax.swing.*;
 import javax.xml.parsers.ParserConfigurationException;
 import java.awt.*;
-import java.io.File;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.HashMap;
 
 public class Calculator extends JFrame {
-    protected JFormattedTextField inputEUR;
+    protected JFormattedTextField inputEUR;                                         //protected ze względu na klasę InputListener, w której jest użyty
     private JPanel mainPanel;
     private JFormattedTextField calculatedOutput;
-    private JComboBox currencyList;
-    HashMap<String, Double> currencies = new HashMap<String, Double>();                 //hashmap przechowujacy symbol i kurs
-    DefaultComboBoxModel<String> model = new DefaultComboBoxModel<String>();            //combobox model, używany do aktualizacji danych w liście walut
+    protected JComboBox currencyList;
+    protected HashMap<String, Double> currencies = new HashMap<String, Double>();                         //hashmap przechowujacy symbol i kurs
+    protected DefaultComboBoxModel<String> model = new DefaultComboBoxModel<String>();            //combobox model, używany do aktualizacji danych w liście walut
 
     Calculator() {
         Color bg = new Color(43, 43, 43);                      //kolor tła aplikacji
@@ -26,6 +29,8 @@ public class Calculator extends JFrame {
         this.setIconImage(icon.getImage());                            //zmiana ikony aplikacji
         this.setVisible(true);
         mainPanel.setBackground(bg);                                    //nadanie koloru tła aplikacji
+        inputEUR.setText("0");
+        calculatedOutput.setText("0");
     }
 
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
@@ -33,5 +38,30 @@ public class Calculator extends JFrame {
         FileHandler f = new FileHandler(c);                              //wywołanie konstruktora klasy zajmującej się plikiem
         InputListener i = new InputListener(c);
         c.currencyList.setModel(c.model);                                //aktualizacja danych
+    }
+
+    public String getSelectedCurrency(){
+        String selectedValue = currencyList.getSelectedItem().toString();       //zwracanie w stringu aktualnego zaznaczenia z listy
+        return selectedValue;
+    }
+
+    public double getCalculatedCurrency(String s){
+        double d = currencies.get(s);
+        try{
+            d *= Double.parseDouble(inputEUR.getText());                        //zabezpieczenie na wypadek pustej wartości
+        } catch (Exception e) {
+
+        }
+        return d;
+    }
+
+    public void setCalculatedCurrency(double d){
+        calculatedOutput.setText(Double.toString(d));                          //ustawienie wyniku konwertowania walutowego
+    }
+
+    public void updateValues(){
+        String s = getSelectedCurrency();                                       //funkcja łącząca powyższe
+        Double d = getCalculatedCurrency(s);
+        setCalculatedCurrency(d);
     }
 }

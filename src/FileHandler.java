@@ -24,7 +24,7 @@ public class FileHandler {
             if(a == JOptionPane.YES_OPTION){
                 URL website = new URL("https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml");                                  //pobieranie pliku ze strony na życzenie użytkownika
                 ReadableByteChannel rbc = Channels.newChannel(website.openStream());
-                FileOutputStream fos = new FileOutputStream("download.xml");
+                FileOutputStream fos = new FileOutputStream("download.xml");                                                            //zapisujemy jako download.xml, jeśli istnieje, będzie nadpisany
                 fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
                 fileName = "download.xml";                                                                                                    //przy pobieraniu pliku zmieniamy nazwę w zmiennej
             } else {
@@ -54,6 +54,5 @@ public class FileHandler {
             }
         }
         JOptionPane.showMessageDialog(null, "Poprawno wczytano dane z pliku.", "Informacja", JOptionPane.INFORMATION_MESSAGE);
-        xml.delete();                                                                                       //usunięcie pliku na wypadek ponownej chęci pobrania w przyszłości
     }
 }
