@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CurrencyCalculator:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/CurrencyCalculator_jar</output-path>
+    <root id="archive" name="CurrencyCalculator.jar">
+      <element id="module-output" name="CurrencyCalculator" />
+      <element id="directory" name="res">
+        <element id="file-copy" path="$PROJECT_DIR$/res/icon.png" />
+      </element>
+    </root>
+  </artifact>
+</component>

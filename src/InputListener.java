@@ -10,6 +10,8 @@ public class InputListener {
                 char c = e.getKeyChar();
                 if (!(Character.isDigit(c) || c == KeyEvent.VK_BACK_SPACE || c == KeyEvent.VK_DELETE || c == KeyEvent.VK_PERIOD)) {
                     e.consume();                                      //jeśli wpisana zawartość jest inna niż liczba lub backspace, kropka lub delete, anulujemy input
+                } else if (calc.inputEUR.getText().contains(".") && c == KeyEvent.VK_PERIOD) {
+                    e.consume();                                      //zabezpieczenie na wypadek wpisania kolejnej kropki
                 }
             }
         });

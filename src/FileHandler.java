@@ -17,7 +17,7 @@ public class FileHandler {
     FileHandler(Calculator calc) throws ParserConfigurationException, IOException, SAXException {
         String fileName;
         fileName = JOptionPane.showInputDialog(null, "Podaj nazwę pliku z danymi.", "Podanie nazwy pliku", JOptionPane.INFORMATION_MESSAGE);        //komunikat proszący o podanie nazwy pliku .xml
-        if(fileName == null || (fileName != null && ("".equals(fileName))))
+        if(fileName == null)
         {
             System.exit(0);                                                                             //zabezpieczenie na wypadek wciśnięcia "Cancel"
         }

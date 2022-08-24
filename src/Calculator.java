@@ -3,10 +3,6 @@ import org.xml.sax.SAXException;
 import javax.swing.*;
 import javax.xml.parsers.ParserConfigurationException;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.HashMap;
 
@@ -25,7 +21,7 @@ public class Calculator extends JFrame {
         this.setLocationRelativeTo(null);                              //pojawienie się okna na środku ekranu
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);           //zatrzymanie procesu przy zamknięciu okna
         this.setContentPane(mainPanel);
-        ImageIcon icon = new ImageIcon("icon.png");
+        ImageIcon icon = new ImageIcon("res/icon.png");
         this.setIconImage(icon.getImage());                            //zmiana ikony aplikacji
         this.setVisible(true);
         mainPanel.setBackground(bg);                                    //nadanie koloru tła aplikacji
