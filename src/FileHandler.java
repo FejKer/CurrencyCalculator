@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
+import java.nio.charset.StandardCharsets;
 
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
@@ -16,6 +17,10 @@ public class FileHandler {
     FileHandler(Calculator calc) throws ParserConfigurationException, IOException, SAXException {
         String fileName;
         fileName = JOptionPane.showInputDialog(null, "Podaj nazwę pliku z danymi.", "Podanie nazwy pliku", JOptionPane.INFORMATION_MESSAGE);        //komunikat proszący o podanie nazwy pliku .xml
+        if(fileName == null || (fileName != null && ("".equals(fileName))))
+        {
+            System.exit(0);                                                                             //zabezpieczenie na wypadek wciśnięcia "Cancel"
+        }
 
         if(!new File(fileName).isFile()){
 

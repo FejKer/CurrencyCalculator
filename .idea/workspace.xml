@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="29311396-a69b-4f16-adce-682cbfdeb9d7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InputListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InputListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661331057741</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Calculator is now working. Moving on to visual changes and testing">
+      <created>1661334838596</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1661334838596</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -109,7 +114,8 @@
     <MESSAGE value="File parser reads data from local file, small gui changes, currencies are now listed to choose" />
     <MESSAGE value="Visual changes, added few message dialog boxes" />
     <MESSAGE value="Added file download option" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added file download option" />
+    <MESSAGE value="Calculator is now working. Moving on to visual changes and testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Calculator is now working. Moving on to visual changes and testing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
